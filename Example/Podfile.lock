@@ -1,7 +1,7 @@
 PODS:
   - GoogleAds-IMA-iOS-SDK (3.9.0)
-  - MediastreamPlatformSDKiOS (1.0.1):
-    - GoogleAds-IMA-iOS-SDK (~> 3.7)
+  - MediastreamPlatformSDKiOS (1.0.2):
+    - GoogleAds-IMA-iOS-SDK
 
 DEPENDENCIES:
   - MediastreamPlatformSDKiOS (from `../`)
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 8f57879738137b81a48ba792e42439e6bff5413b
-  MediastreamPlatformSDKiOS: 9396b99faf582ddb36e2324e1355a47d40f4a841
+  MediastreamPlatformSDKiOS: 4e2b15135fd5499ac68dd887d5769bd6838fc8a8
 
 PODFILE CHECKSUM: b860dc073aeced6f66747176fba9be2f663c85af
 

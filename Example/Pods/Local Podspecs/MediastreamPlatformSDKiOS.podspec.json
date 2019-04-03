@@ -1,6 +1,6 @@
 {
   "name": "MediastreamPlatformSDKiOS",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "summary": "MediastreamPlatformSDKiOS.",
   "description": "Platform SDK solution for development on mobiles.",
   "homepage": "https://github.com/cruiz666/MediastreamPlatformSDKiOS",
@@ -13,17 +13,20 @@
   },
   "source": {
     "git": "https://github.com/cruiz666/MediastreamPlatformSDKiOS.git",
-    "tag": "1.0.1"
+    "tag": "1.0.2"
   },
   "swift_version": "4.2",
-  "platforms": {
-    "ios": "9.0"
-  },
   "source_files": "MediastreamPlatformSDKiOS/Classes/**/*",
   "resources": "MediastreamPlatformSDKiOS/Assets/*.xcassets",
   "dependencies": {
     "GoogleAds-IMA-iOS-SDK": [
-      "~> 3.7"
+
     ]
+  },
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
   }
 }
