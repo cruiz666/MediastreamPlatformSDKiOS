@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "MediastreamPlatformSDK.h"
 
 FOUNDATION_EXPORT double MediastreamPlatformSDKiOSVersionNumber;
 FOUNDATION_EXPORT const unsigned char MediastreamPlatformSDKiOSVersionString[];
