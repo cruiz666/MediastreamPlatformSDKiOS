@@ -32,6 +32,7 @@
 		C341FEF493FAACA75D8790C4E72B99CD /* MediastreamLoadingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F72CEF016741AADB4CDAB2455C134D2 /* MediastreamLoadingUIView.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		C8EE9199D2F18EC4A813457875364F19 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBEFCA50442DDB2A309609FC11E756 /* Asset.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		CAC1FD7F58D3D0FDB7E2B88249D42906 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E59A607322556880005A9AF1 /* MediastreamPlatformSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59A607222556880005A9AF1 /* MediastreamPlatformSDK.framework */; };
 		E8D64207FD0E637F609E2EADE79C757D /* MediastreamPlatformSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FEA2B7FCD88976AB427B5C5402C7D0E /* MediastreamPlatformSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFA740CF29618D90243913CDB863904C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCEEABD5A7903B1868C6B987A433658 /* SwiftyJSON.swift */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
@@ -103,7 +104,7 @@
 		D2F6A28F8575F37AED093A0BA88C320F /* MediastreamPlatformSDKiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MediastreamPlatformSDKiOS-umbrella.h"; sourceTree = "<group>"; };
 		D6E52C999D0650318A0FBC0EBA8A64D9 /* MediastreamPlatformSDKiOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = MediastreamPlatformSDKiOS.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DE58004E02153E9D98ABC36ACCDF6A31 /* Pods-MediastreamPlatformSDKiOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MediastreamPlatformSDKiOS_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E59A603822556303005A9AF1 /* MediastreamPlatformSDKiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MediastreamPlatformSDKiOS.framework; sourceTree = "<group>"; };
+		E59A607222556880005A9AF1 /* MediastreamPlatformSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MediastreamPlatformSDK.framework; sourceTree = "<group>"; };
 		E938F59B4E10874BCFE4199F4099D98E /* MediastreamPlatformSDKiOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MediastreamPlatformSDKiOS.xcconfig; sourceTree = "<group>"; };
 		EC855396073ACA3B5CD7CC8F297BC585 /* Pods-MediastreamPlatformSDKiOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MediastreamPlatformSDKiOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F3C3C73C1F7B2D033B0FA70FADC07D16 /* AssetLoaderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetLoaderDelegate.swift; path = MediastreamPlatformSDKiOS/Classes/AssetLoaderDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59A607322556880005A9AF1 /* MediastreamPlatformSDK.framework in Frameworks */,
 				C167C574B7FE5074D8C4FE20189B438A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +208,7 @@
 		889177EB09535C495013BC5CC50C9492 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				E59A603822556303005A9AF1 /* MediastreamPlatformSDKiOS.framework */,
+				E59A607222556880005A9AF1 /* MediastreamPlatformSDK.framework */,
 				18A364413F131A6C262243B1D47B3DD0 /* LICENSE */,
 				D6E52C999D0650318A0FBC0EBA8A64D9 /* MediastreamPlatformSDKiOS.podspec */,
 				3F459CD59FE7F24C24DACC4E89325909 /* README.md */,
