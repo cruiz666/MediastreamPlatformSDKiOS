@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MediastreamPlatformSDKiOS_Example' do
+  pod 'MediastreamPlatformSDKiOS', :path => '../'
+
+  target 'MediastreamPlatformSDKiOS_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
