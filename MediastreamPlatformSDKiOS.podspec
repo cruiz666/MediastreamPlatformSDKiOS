@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'MediastreamPlatformSDKiOS'
-    s.version          = '1.0.1'
+    s.version          = '1.0.2'
     s.summary          = 'MediastreamPlatformSDKiOS.'
     s.description      = <<-DESC
     Platform SDK solution for development on mobiles.
@@ -17,10 +17,13 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://github.com/cruiz666/MediastreamPlatformSDKiOS'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'cruiz666' => 'ruizcarlos1985@gmail.com' }
-    s.source           = { :git => 'https://github.com/cruiz666/MediastreamPlatformSDKiOS.git', :tag => s.version.to_s }
+    #s.source           = { :git => 'https://github.com/cruiz666/MediastreamPlatformSDKiOS.git', :tag => s.version.to_s }
+    s.source           = { :http => 'https://s3.amazonaws.com/mediastream-platform-sdk-ios/sdk/1.0.1/MediastreamPlatformSDKiOS.zip' }
     s.swift_version    = '4.2'
     s.ios.deployment_target = '9.0'
-    s.source_files = 'MediastreamPlatformSDKiOS/Classes/**/*'
-    s.resource = 'MediastreamPlatformSDKiOS/Assets/*.xcassets'
+    #s.source_files = 'MediastreamPlatformSDKiOS/Classes/**/*'
+    #s.public_header_files = 'MediastreamPlatformSDKiOS/Classes/**/*.h'
+    #s.resource = 'MediastreamPlatformSDKiOS/Assets/*.xcassets'
+    s.vendored_frameworks = 'MediastreamPlatformSDKiOS/MediastreamPlatformSDKiOS.framework'
     s.dependency 'GoogleAds-IMA-iOS-SDK'
 end
