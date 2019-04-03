@@ -1,0 +1,16 @@
+PODS:
+  - MediastreamPlatformSDKiOS (0.1.0)
+
+DEPENDENCIES:
+  - MediastreamPlatformSDKiOS (from `../`)
+
+EXTERNAL SOURCES:
+  MediastreamPlatformSDKiOS:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MediastreamPlatformSDKiOS: 8a13a7144f63561b430c442e1a1d30d2e74f06d2
+
+PODFILE CHECKSUM: b860dc073aeced6f66747176fba9be2f663c85af
+
+COCOAPODS: 1.5.3

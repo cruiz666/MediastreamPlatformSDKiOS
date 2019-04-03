@@ -1,0 +1,6 @@
+framework module Pods_MediastreamPlatformSDKiOS_Example {
+  umbrella header "Pods-MediastreamPlatformSDKiOS_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
