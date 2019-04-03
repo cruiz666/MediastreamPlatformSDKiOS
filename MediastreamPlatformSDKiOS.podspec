@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
     #s.source_files = 'MediastreamPlatformSDKiOS/Classes/**/*'
     #s.public_header_files = 'MediastreamPlatformSDKiOS/Classes/**/*.h'
     #s.resource = 'MediastreamPlatformSDKiOS/Assets/*.xcassets'
-    s.vendored_frameworks = 'MediastreamPlatformSDKiOS/MediastreamPlatformSDKiOS.framework'
+    s.vendored_frameworks = 'MediastreamPlatformSDKiOS.framework'
     s.dependency 'GoogleAds-IMA-iOS-SDK'
 end
