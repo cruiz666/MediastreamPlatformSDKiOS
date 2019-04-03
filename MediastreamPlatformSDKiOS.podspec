@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'MediastreamPlatformSDKiOS'
-    s.version          = '1.0.1'
+    s.version          = '1.0.2'
     s.summary          = 'MediastreamPlatformSDKiOS.'
     s.description      = <<-DESC
     Platform SDK solution for development on mobiles.
@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
     s.platform         = :ios, '9.0'
     s.source_files = 'MediastreamPlatformSDKiOS/Classes/**/*'
     s.resource = 'MediastreamPlatformSDKiOS/Assets/*.xcassets'
-    s.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.7'
+    s.dependency 'GoogleAds-IMA-iOS-SDK'
 end
