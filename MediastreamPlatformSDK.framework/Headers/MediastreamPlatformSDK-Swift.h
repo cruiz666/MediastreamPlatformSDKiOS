@@ -186,9 +186,35 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class UIWindow;
+@class UIApplication;
+
+SWIFT_CLASS("_TtC22MediastreamPlatformSDK11AppDelegate")
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@property (nonatomic, strong) UIWindow * _Nullable window;
+- (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions SWIFT_WARN_UNUSED_RESULT;
+- (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
+- (void)applicationDidEnterBackground:(UIApplication * _Nonnull)application;
+- (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
+- (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
+- (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class AVURLAsset;
 
 SWIFT_CLASS("_TtC22MediastreamPlatformSDK19AssetLoaderDelegate")
 @interface AssetLoaderDelegate : NSObject
+/// The URL scheme for FPS content.
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull customScheme;)
++ (NSString * _Nonnull)customScheme SWIFT_WARN_UNUSED_RESULT;
+/// Error domain for errors being thrown in the process of getting a CKC.
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull errorDomain;)
++ (NSString * _Nonnull)errorDomain SWIFT_WARN_UNUSED_RESULT;
+/// Notification for when the persistent content key has been saved to disk.
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSNotificationName _Nonnull didPersistContentKeyNotification;)
++ (NSNotificationName _Nonnull)didPersistContentKeyNotification SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithAsset:(AVURLAsset * _Nonnull)asset assetName:(NSString * _Nonnull)assetName OBJC_DESIGNATED_INITIALIZER;
 /// Returns the Application Certificate needed to generate the Server Playback Context message.
 - (NSData * _Nullable)fetchApplicationCertificate SWIFT_WARN_UNUSED_RESULT;
 - (NSData * _Nullable)contentKeyFromKeyServerModuleWithSPCDataWithSpcData:(NSData * _Nonnull)spcData assetIDString:(NSString * _Nonnull)assetIDString SWIFT_WARN_UNUSED_RESULT;
@@ -208,6 +234,13 @@ SWIFT_CLASS("_TtC22MediastreamPlatformSDK19AssetLoaderDelegate")
 
 
 
+
+SWIFT_CLASS("_TtC22MediastreamPlatformSDK20AssetPlaybackManager")
+@interface AssetPlaybackManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
 @class UIImageView;
 @class UIButton;
 @class UILabel;
@@ -226,6 +259,7 @@ SWIFT_CLASS("_TtC22MediastreamPlatformSDK23MediastreamCustomUIView")
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified dismissButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified liveStatus;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified title;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified castButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified playButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified backwardButton;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified volumeButton;
@@ -240,12 +274,29 @@ SWIFT_CLASS("_TtC22MediastreamPlatformSDK23MediastreamCustomUIView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC22MediastreamPlatformSDK24MediastreamLoadingUIView")
+@interface MediastreamLoadingUIView : UIView
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * _Null_unspecified loadingIndicator;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC22MediastreamPlatformSDK25MediastreamMessagesUIView")
+@interface MediastreamMessagesUIView : UIView
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified message;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class IMAAdsLoader;
 @class IMAAdsLoadedData;
 @class IMAAdLoadingErrorData;
 @class IMAAdsManager;
 @class IMAAdEvent;
 @class IMAAdError;
+@class UITapGestureRecognizer;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC22MediastreamPlatformSDK22MediastreamPlatformSDK")
@@ -253,6 +304,9 @@ SWIFT_CLASS("_TtC22MediastreamPlatformSDK22MediastreamPlatformSDK")
 - (nonnull instancetype)init;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)contentDidFinishPlaying:(NSNotification * _Nonnull)notification;
+- (void)handleAVPlayerAccess:(NSNotification * _Nonnull)notification;
+- (void)internetChangeWithNote:(NSNotification * _Nonnull)note;
+- (void)increaseWaitingCount;
 - (void)adsLoader:(IMAAdsLoader * _Null_unspecified)loader adsLoadedWithData:(IMAAdsLoadedData * _Null_unspecified)adsLoadedData;
 - (void)adsLoader:(IMAAdsLoader * _Null_unspecified)loader failedWithErrorData:(IMAAdLoadingErrorData * _Null_unspecified)adErrorData;
 - (void)adsManager:(IMAAdsManager * _Null_unspecified)adsManager didReceiveAdEvent:(IMAAdEvent * _Null_unspecified)event;
@@ -261,6 +315,15 @@ SWIFT_CLASS("_TtC22MediastreamPlatformSDK22MediastreamPlatformSDK")
 - (void)adsManager:(IMAAdsManager * _Null_unspecified)adsManager didReceiveAdError:(IMAAdError * _Null_unspecified)error;
 - (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
 - (void)showCastButtonWithShow:(BOOL)show;
+- (void)setErrorMessageWithMessage:(NSString * _Nonnull)message;
+- (void)checkActionWithSender:(UITapGestureRecognizer * _Nonnull)sender;
+- (void)customUIPlayButtonPressedWithSender:(UIButton * _Nonnull)sender;
+- (void)customUIBackwardButtonPressedWithSender:(UIButton * _Nonnull)sender;
+- (void)customdvrLiveButtonPressedWithSender:(UIButton * _Nonnull)sender;
+- (void)customUIVolumeButtonPressedWithSender:(UIButton * _Nonnull)sender;
+- (void)customUIFullscreenButtonPressedWithSender:(UIButton * _Nonnull)sender;
+- (void)customUISliderValueChangedWithSender:(UISlider * _Nonnull)sender;
+- (void)customLogoGoToUrlWithTapGestureRecognizer:(UITapGestureRecognizer * _Nonnull)tapGestureRecognizer;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
@@ -277,6 +340,23 @@ SWIFT_CLASS("_TtC22MediastreamPlatformSDK24MediastreamPlayerTracker")
 
 
 
+SWIFT_CLASS("_TtC22MediastreamPlatformSDK14RestApiManager")
+@interface RestApiManager : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+SWIFT_CLASS("_TtC22MediastreamPlatformSDK14ViewController")
+@interface ViewController : UIViewController
+- (void)viewDidLoad;
+- (IBAction)prev:(UIButton * _Nonnull)sender;
+- (IBAction)origin:(id _Nonnull)sender;
+- (IBAction)next:(id _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
