@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
     s.swift_version    = '5.2'
     s.ios.deployment_target = '9.0'
     s.vendored_frameworks = 'MediastreamPlatformSDK.framework'
-    s.dependency 'GoogleAds-IMA-iOS-SDK', '3.11.4'
+    s.dependency 'GoogleAds-IMA-iOS-SDK'
 #    s.dependency 'google-cast-sdk'
 end
