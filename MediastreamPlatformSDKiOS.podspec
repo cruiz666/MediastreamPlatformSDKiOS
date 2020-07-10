@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     s.source           = { :http => 'https://s3.amazonaws.com/mediastream-platform-sdk-ios/sdk/1.0.62/MediastreamPlatformSDKiOS.zip' }
     s.swift_version    = '5.2'
     s.ios.deployment_target = '9.0'
-    s.vendored_frameworks = 'MediastreamPlatformSDK.framework'
+    s.vendored_frameworks = 'MediastreamPlatformSDKiOS.framework'
     s.dependency 'GoogleAds-IMA-iOS-SDK'
 #    s.dependency 'google-cast-sdk'
 end
