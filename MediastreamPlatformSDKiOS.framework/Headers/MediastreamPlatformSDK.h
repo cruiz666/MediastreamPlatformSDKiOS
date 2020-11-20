@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-//v6.1.0
+//1.0.66
 //! Project version number for MediastreamPlatformSDK.
 FOUNDATION_EXPORT double MediastreamPlatformSDKVersionNumber;
 

@@ -226,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -267,9 +268,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MediastreamPlatformSDKiOS_Example/Pods-MediastreamPlatformSDKiOS_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MediastreamPlatformSDKiOS_Example/Pods-MediastreamPlatformSDKiOS_Example-frameworks.sh",
 				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
-				"${BUILT_PRODUCTS_DIR}/MediastreamPlatformSDKiOS/MediastreamPlatformSDKiOS.framework",
+				"${PODS_ROOT}/../../MediastreamPlatformSDKiOS.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -278,7 +279,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MediastreamPlatformSDKiOS_Example/Pods-MediastreamPlatformSDKiOS_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MediastreamPlatformSDKiOS_Example/Pods-MediastreamPlatformSDKiOS_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		983B44EEFC2033A382CBAC4E /* [CP] Check Pods Manifest.lock */ = {
@@ -475,7 +476,9 @@
 			baseConfigurationReference = E5A3CECA45201C260578B11E /* Pods-MediastreamPlatformSDKiOS_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = MediastreamPlatformSDKiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -489,7 +492,9 @@
 			baseConfigurationReference = E3A41E491F2EEEF24F8E195D /* Pods-MediastreamPlatformSDKiOS_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = MediastreamPlatformSDKiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

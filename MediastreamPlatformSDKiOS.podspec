@@ -18,8 +18,8 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'cruiz666' => 'ruizcarlos1985@gmail.com' }
     s.source           = { :http => 'https://s3.amazonaws.com/mediastream-platform-sdk-ios/sdk/1.0.67/MediastreamPlatformSDKiOS.zip' }
-    s.swift_version    = '5.2'
-    s.ios.deployment_target = '9.0'
+    s.swift_version    = '5.3'
+    s.ios.deployment_target = '10.1'
     s.vendored_frameworks = 'MediastreamPlatformSDKiOS.framework'
     s.dependency 'GoogleAds-IMA-iOS-SDK'
 #    s.dependency 'google-cast-sdk'
