@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
     s.swift_version    = '5.3'
     s.ios.deployment_target = '10.1'
     s.vendored_frameworks = 'MediastreamPlatformSDKiOS.framework'
-    s.dependency 'GoogleAds-IMA-iOS-SDK'
+    s.dependency 'GoogleAds-IMA-iOS-SDK', '3.11.4'
 #    s.dependency 'google-cast-sdk'
     s.pod_target_xcconfig = {
       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
