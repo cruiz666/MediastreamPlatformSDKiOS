@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'MediastreamPlatformSDKiOS'
-    s.version          = '1.0.77'
+    s.version          = '1.0.78'
     s.summary          = 'MediastreamPlatformSDKiOS.'
     s.description      = <<-DESC
     Platform SDK solution for development on mobiles.
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://github.com/cruiz666/MediastreamPlatformSDKiOS'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'cruiz666' => 'ruizcarlos1985@gmail.com' }
-    s.source           = { :http => 'https://s3.amazonaws.com/mediastream-platform-sdk-ios/sdk/1.0.77/MediastreamPlatformSDKiOS.zip' }
+    s.source           = { :http => 'https://s3.amazonaws.com/mediastream-platform-sdk-ios/sdk/1.0.78/MediastreamPlatformSDKiOS.zip' }
     s.swift_version    = ['5.2', '5.3', '5.3.1', '5.3.2', '5.3.3']
     s.ios.deployment_target = '10.1'
     s.vendored_frameworks = 'MediastreamPlatformSDKiOS.framework'
