@@ -476,6 +476,7 @@
 			baseConfigurationReference = E5A3CECA45201C260578B11E /* Pods-MediastreamPlatformSDKiOS_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				INFOPLIST_FILE = MediastreamPlatformSDKiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -491,6 +492,7 @@
 			baseConfigurationReference = E3A41E491F2EEEF24F8E195D /* Pods-MediastreamPlatformSDKiOS_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				INFOPLIST_FILE = MediastreamPlatformSDKiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
