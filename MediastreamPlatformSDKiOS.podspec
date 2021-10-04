@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = 'MediastreamPlatformSDKiOS.framework'
     s.dependency 'GoogleAds-IMA-iOS-SDK', '3.11.4'
     s.dependency 'YouboraLib', '6.3.9'
-    s.dependency 'YouboraAVPlayerAdapter', '6.3.4'
+    s.dependency 'YouboraAVPlayerAdapter', '6.3.5'
 #    s.dependency 'google-cast-sdk'
     s.pod_target_xcconfig = {
       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
