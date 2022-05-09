@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-    s.name             = 'MediastreamPlatformSDKiOS-TV'
+    s.name             = 'MediastreamPlatformSDKiOS'
     s.version          = '1.1.13'
     s.summary          = 'MediastreamPlatformSDKiOS.'
     s.description      = <<-DESC
